@@ -15,6 +15,7 @@ public class Link extends Mensaje{
         link = uri.toURL();
     }
 
+    @Override
     public void imprimirMensaje(){
         System.out.println(link);
     }
