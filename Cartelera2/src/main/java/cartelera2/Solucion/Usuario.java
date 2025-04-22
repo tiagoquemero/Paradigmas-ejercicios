@@ -3,7 +3,7 @@ package cartelera2.Solucion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario {
+public abstract class Usuario {
     private final String nombreUsuario;
     private final String contrasenia;
     private final List<Mensaje> mensajesRecibidos;
@@ -43,4 +43,6 @@ public class Usuario {
             mensajeRecibido.imprimirMensaje();
         }
     }
+
+    public abstract boolean cerrarSistema();
 }

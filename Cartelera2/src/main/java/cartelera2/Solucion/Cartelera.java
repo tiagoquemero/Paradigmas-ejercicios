@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Cartelera {
-    private Usuario usuarioActual;
-    private final List<Usuario> usuarioRegistrados;
+    protected static Usuario usuarioActual;
+    protected static List<Usuario> usuarioRegistrados;
 
     public Cartelera(){
         usuarioRegistrados = new ArrayList<>();
@@ -47,11 +47,6 @@ public class Cartelera {
     }
 
     public boolean cerrarSistema(){
-        if(!(usuarioActual instanceof Personal))
-            return false;
-        System.out.println("El sistema está siendo cerrado por " + usuarioActual.getNombreUsuario());
-        usuarioRegistrados.clear();
-        usuarioActual = null;
-        return true;
+        return usuarioActual.cerrarSistema();
     }
 }
