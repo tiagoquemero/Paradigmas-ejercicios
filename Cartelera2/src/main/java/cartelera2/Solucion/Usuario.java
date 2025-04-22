@@ -34,23 +34,13 @@ public class Usuario {
 
     public void listarMensajesEnviados(){
         for(Mensaje mensajeEnviado : mensajesEnviados){
-            if(mensajeEnviado instanceof TextoSimple)
-                System.out.println(mensajeEnviado.getMensaje());
-            else {
-                Link link = (Link)mensajeEnviado;
-                System.out.println(link.getLink());
-            }
+            mensajeEnviado.imprimirMensaje();
         }
     }
 
     public void listarMensajesRecibidos(){
         for(Mensaje mensajeRecibido : mensajesRecibidos){
-            if(mensajeRecibido instanceof TextoSimple)
-                System.out.println(mensajeRecibido.getMensaje());
-            else {
-                Link link = (Link)mensajeRecibido;
-                System.out.println(link.getLink());
-            }
+            mensajeRecibido.imprimirMensaje();
         }
     }
 }
